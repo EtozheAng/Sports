@@ -1,0 +1,352 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+.header{
+  background-image: url(../images/Header-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  &__content{
+    padding: 133px 0 164px;
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.03em;
+    max-width: 546px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    @extend %lato-400;
+    max-width: 453px;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 50px;
+    color: $text;
+  }
+}
+.download-icon{
+    max-width: 347px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+  &__img{
+    padding-top: 61px;
+  }
+}
+.info{
+  background-image: url(../images/info/info-bg.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #fff;
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 557px;
+    &:nth-child(2){
+      padding: 133px 0 117px;
+    }
+  }
+  &__item-img{
+    box-shadow: -22.0416px 23.8785px 48.9814px rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
+    position: relative;
+    top: 109px;
+    left: 0;
+    z-index: 1;
+  }
+  &__item-images{
+    position: relative;
+    top: 79px;
+    left: 106px;
+  }
+  &__descr{
+    margin-bottom: 27px;
+    text-transform: uppercase;
+    color: $accent;
+    @extend %lato-700;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  &__title{
+    margin-bottom: 27px;
+  }
+  &__text{
+    max-width: 410px;
+    @extend %lato-400;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 22px;
+    color: $text;
+  }
+  &__link{
+    font-size: 16px;
+    line-height: 21px;
+    @extend %lato-700;
+    text-decoration: none;
+    color: $accent;
+    cursor: pointer;
+    padding-bottom: 117px;
+  }
+}
+
+.interface{
+  background-image: url(../images/interface-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #fff;
+  &__item{
+    padding: 217px 0 171px;
+  }
+  &__descr {
+    margin-bottom: 27px;
+    text-transform: uppercase;
+    color: $accent;
+    @extend %lato-700;
+    font-size: 16px;
+    line-height: 21px;
+  }
+    &__title {
+    margin-bottom: 27px;
+  }
+    &__text {
+    max-width: 487px;
+    @extend %lato-400;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 54px;
+    color: $text;
+  }
+    &__link {
+    padding-bottom: 117px;
+    font-size: 16px;
+    line-height: 21px;
+    @extend %lato-700;
+    text-decoration: none;
+    color: $accent;
+    cursor: pointer;
+  }
+}
+
+.features{
+  background-image: url(../images/features/features-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 76px 0 66px;
+  &__title{
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 54px;
+  }
+  &__features{
+    margin-bottom: 58px;
+  }
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 312px;
+    margin-bottom: 45px;
+  }
+  &__icon{
+    margin-bottom: 6px;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 23px;
+    color: #fff;
+    @extend %lato-400;
+  }
+}
+.slider{
+  padding: 68px 0 108px;
+  background-color: #fff;
+  &__title{
+    text-align: center;
+    margin-bottom: 63px;
+  }
+  &__inner{
+    position: relative;
+    z-index: 2;
+  }
+  &__img{
+    padding: 0 15px;
+    position: relative;
+    z-index: -1;
+  }
+  &__item{
+    position: relative;
+    display: block;
+    max-width: 309px;
+    height: 161px;
+    border-radius: 4px;
+    border: 1px solid #828282;
+    padding: 15px 13px 24px 17px;
+    margin: 0 10px;
+  }
+  &__item-head{
+    display: flex;
+    margin-bottom: 23px;
+  }
+  &__name{
+    margin-left: 11px;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 24px;
+      right: 13px;
+      width: 15px;
+      height: 12px;
+      background-image: url(../images/slider/twitter.svg);        
+      }
+  }
+  &__text{
+    width: 279px;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    color: $text;
+  }
+}
+.slick-prev,
+.slick-next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  width: 67px;
+  height: 67px;
+  z-index: 3;
+}
+.slick-next{
+  right: 101px;
+}
+.slick-prev{
+  left: 101px;
+}
+.slick-slide{
+  padding: 0 17px;
+}
+.slick-dots {
+  position: absolute;
+  display: flex;
+  bottom: -47px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: -13px;
+
+  button {
+    font-size: 0;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    margin-left: 11px;
+    background-color: #828282;
+  }
+}
+#slick-slide-control00 {
+  opacity: 1;
+}
+#slick-slide-control01{
+  opacity: 0.9;
+}
+#slick-slide-control02{
+  opacity: 0.6;
+}
+#slick-slide-control03{
+  opacity: 0.4;
+}
+#slick-slide-control04{
+  opacity: 0.2;
+}
+#slick-slide-control05{
+  opacity: 0.15;
+}
+#slick-slide-control06{
+  opacity: 0.1;
+}
+    .slick-active button {
+      border: 1px solid #000;
+    }
+
+
+.slick-slide:not(.slick-active) {
+  opacity: .4;
+}
+
+.featured{
+  padding: 57px 0 68px;
+  &__title{
+      text-align: center;
+      margin-bottom: 58px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.download{
+  padding: 105px 0 98px;
+  background-image: url(../images/downloadBG.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 50%;
+  background-position-x: -30px;
+  background-color: #fff;
+  &__wrapper {
+    max-width: 555px;
+    margin-left: auto;
+  }
+  &__title{
+    margin-bottom: 35px;
+  }
+  &__text{
+    line-height: 25px;
+    color: $text;
+    margin-bottom: 38px;
+  }
+}
+.footer{
+  background-color: $accent;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 0 47px;
+  }
+  &__nav{
+    display: flex;
+  }
+  &__nav-list + &__nav-list{
+    margin-left: 37px;
+  }
+  &__nav-link{
+    color: #fff;
+    font-size: 16px;
+    line-height: 21px;
+    @extend %lato-700;
+  }
+  &__icon{
+    display: flex;
+  }
+  &__icon-list + &__icon-list{
+    margin-left: 17px;
+  }
+}
+
+@import 'media';
