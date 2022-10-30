@@ -10,6 +10,20 @@
      variableWidth: true,
      slidesToShow: 3,
      dots: true,
+     responsive: [
+       {
+         breakpoint: 600,
+         settings: {
+           infinite: false,
+         }
+       },
+       {
+         breakpoint: 360,
+         settings: {
+           arrows: false
+         }
+       },
+     ]
    });
 
  });

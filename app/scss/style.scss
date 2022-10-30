@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+  background-color: #F4F6F9;
   &__content{
     padding: 133px 0 164px;
   }
@@ -44,12 +45,13 @@
   background-repeat: no-repeat;
   background-position: left;
   background-color: #fff;
+  position: relative;
   &__items{
     display: flex;
     justify-content: space-between;
   }
   &__item{
-    max-width: 557px;
+
     &:nth-child(2){
       padding: 133px 0 117px;
     }
@@ -60,12 +62,13 @@
     position: relative;
     top: 109px;
     left: 0;
-    z-index: 1;
+    z-index: 2;
   }
   &__item-images{
     position: relative;
     top: 79px;
     left: 106px;
+    z-index: 1;
   }
   &__descr{
     margin-bottom: 27px;
@@ -139,7 +142,7 @@
   background-image: url(../images/features/features-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 76px 0 66px;
+  padding: 76px 0 35px;
   &__title{
     color: #FFFFFF;
     text-align: center;
@@ -164,6 +167,7 @@
     font-size: 16px;
     line-height: 23px;
     color: #fff;
+    position: relative;
     @extend %lato-400;
   }
 }
@@ -281,12 +285,9 @@
     .slick-active button {
       border: 1px solid #000;
     }
-
-
 .slick-slide:not(.slick-active) {
   opacity: .4;
 }
-
 .featured{
   padding: 57px 0 68px;
   &__title{
@@ -294,6 +295,7 @@
       margin-bottom: 58px;
   }
   &__list{
+    gap: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -305,8 +307,6 @@
   background-image: url(../images/downloadBG.png);
   background-repeat: no-repeat;
   background-position: left;
-  background-size: 50%;
-  background-position-x: -30px;
   background-color: #fff;
   &__wrapper {
     max-width: 555px;
@@ -325,6 +325,7 @@
   background-color: $accent;
   &__wrapper{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 48px 0 47px;
